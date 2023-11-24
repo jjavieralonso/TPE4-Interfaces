@@ -63,3 +63,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
     animateIfVisible();
 });
+
+function applyFilters(e, color, borderColor) { //Con 'onmouseover' aplicado en el html, hace que se apliquen los filtros para que los otros 2 pidermans tomen blur, y el fondo y borde del contenedor se ponga del color deseado
+    document.querySelector('#spidermans-info-section').style.backgroundColor = color;
+    document.querySelector('#spidermans-info-section').style.borderTop = '20px solid ' + borderColor;
+    document.querySelector('#spidermans-info-section').style.borderBottom = '20px solid ' + borderColor;
+    document.querySelectorAll('.spidermans-info-section img').forEach(function (elemento) {
+        if (e.classList.contains(e)) {
+            e.classList.remove('blurred');
+        } else {
+            e.classList.add('blurred');
+        }
+    });
+}
+
+function resetFilters() { //Con 'onmouseout' en el html, hacemos que se limpien los filtros que aplicamos previamente asi queda default
+    document.querySelector('#spidermans-info-section').style.backgroundColor = '';
+    document.querySelector('#spidermans-info-section').style.borderTop = '20px solid transparent';
+    document.querySelector('#spidermans-info-section').style.borderBottom = '20px solid transparent';
+    document.querySelectorAll('.spidermans-info-section img').forEach(function (e) {
+        e.classList.remove('blurred');
+    });
+}

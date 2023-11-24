@@ -462,6 +462,17 @@ header {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+.blurred {
+    filter: blur(5px);
+}
+
+.spidermans-info-section img:hover{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.2);
 }
 
 .background-footer {

@@ -138,11 +138,16 @@
         <h2>"un gran poder conlleva una gran resposabilidad"</h2>
         <button class="buy-btn">Comprar ahora</button>
     </section>
-    <section class="spidermans-info-section">
-        <img src="assets/images/spiderman-info-1.png" alt="Ghost Spider">
-        <img src="assets/images/spiderman-info-2.png" alt="Spider Man">
-        <img src="assets/images/spiderman-info-3.png" alt="Miles Morales">
+    <section class="spidermans-info-section" id="spidermans-info-section">
+        <img src="assets/images/spiderman-info-1.png" alt="Ghost Spider" class="ghost-spider-info"
+            onmouseover="applyFilters('ghost-spider-info', '#FF00A70A', '#C92B94')" onmouseout=" resetFilters()">
+        <img src="assets/images/spiderman-info-2.png" alt="Spider Man" class="spiderman-info"
+            onmouseover="applyFilters('spiderman-info', '#2552C817', '#2552C89C')" onmouseout=" resetFilters()">
+        <img src="assets/images/spiderman-info-3.png" alt="Miles Morales" class="miles-morales-info"
+            onmouseover="applyFilters('miles-morales-info', '#0000001A', '#304C71')" onmouseout=" resetFilters()">
     </section>
+
+
     <section class="subscribe-section">
         <div style="position: relative;">
             <div class="subscribe-form">
