@@ -233,6 +233,44 @@ header {
     margin-top: 248px;
 }
 
+.spiderman-cards div{
+    opacity: 0;
+}
+
+@keyframes fadeInUp-1 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp-2 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp-3 {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .spiderman-history {
     width: 333px;
     height: 218px;
@@ -259,12 +297,17 @@ header {
 
 .ghost-spider-section img {
     width: 500px;
-    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.ghost-spider-section img:hover {
+    scale: 1.2;
+    z-index: 999;
 }
 
 .ghost-spider-card-1 {
     position: absolute;
-    top: -200px;
+    top: -100px;
     left: 75px;
     transform: rotate(-13.078deg);
     z-index: 1;
@@ -272,7 +315,7 @@ header {
 
 .ghost-spider-card-2 {
     position: absolute;
-    top: -30px;
+    top: 70px;
     left: 85px;
     transform: rotate(-26.474deg);
     z-index: 2;
@@ -280,31 +323,10 @@ header {
 
 .ghost-spider-card-3 {
     position: absolute;
-    top: 175px;
+    top: 275px;
     left: 100px;
     transform: rotate(-36.016deg);
     z-index: 3;
-}
-
-@keyframes fall-1 {
-    to {
-        opacity: 1;
-        transform: translateY(100px) rotate(-13.078deg);
-    }
-}
-
-@keyframes fall-2 {
-    to {
-        opacity: 1;
-        transform: translateY(100px) rotate(-26.474deg);
-    }
-}
-
-@keyframes fall-3 {
-    to {
-        opacity: 1;
-        transform: translateY(100px) rotate(-36.016deg);
-    }
 }
 
 .ghost-spider-section {

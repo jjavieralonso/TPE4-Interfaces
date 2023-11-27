@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+//funcion para el logo principal se transforme (no funciona)
 document.addEventListener("DOMContentLoaded", function () {
     var titleImage = document.getElementById("dynamicImage");
     var initialHeight = titleImage.clientHeight;
@@ -38,8 +40,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+//Funcion para las 3 tarjetas de ghost spider aparezcan cuando se carga su seccion
 document.addEventListener('DOMContentLoaded', function () {
-    function isInViewport(element) {
+    function isInViewport(element) { //Funcion para ver si el usuario esta en la seccion de spidermans-cards
         var rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -49,26 +52,27 @@ document.addEventListener('DOMContentLoaded', function () {
         );
     }
 
-    function animateIfVisible() {
-        var cards = document.querySelectorAll('.ghost-spider-section img');
+    function animateSpiderCards() {
+        var spidercards = document.querySelectorAll('.spiderman-cards div');
+        var delay = 0.3;
 
-        cards.forEach(function (card, index) {
-            if (isInViewport(card)) {
-                card.style.animation = 'fall-' + (index + 1) + ' 0.5s ease-in-out forwards';
+        spidercards.forEach(function (spidercard, index = 0) {
+            if (isInViewport(spidercard)) {
+                spidercard.style.animation = `fadeInUp-${index + 1} 0.5s ease-in-out forwards`; //se le va a dar esa animacion a cada tarjeta de spiderman.
+                spidercard.style.animationDelay = delay * index + 's'; //dependiendo de que index sea, se le va a multiplicar x 0.2, y va a terminar siendo el delay para que no lleguen todas juntas.
             }
         });
     }
-
-    window.addEventListener('scroll', animateIfVisible);
-
+   window.addEventListener('scroll', animateSpiderCards);
     animateIfVisible();
 });
+
 
 function applyFilters(e, color, borderColor) { //Con 'onmouseover' aplicado en el html, hace que se apliquen los filtros para que los otros 2 pidermans tomen blur, y el fondo y borde del contenedor se ponga del color deseado
     document.querySelector('#spidermans-info-section').style.backgroundColor = color;
     document.querySelector('#spidermans-info-section').style.borderTop = '20px solid ' + borderColor;
     document.querySelector('#spidermans-info-section').style.borderBottom = '20px solid ' + borderColor;
-    document.querySelectorAll('.spidermans-info-section img').forEach(function (elemento) {
+    document.querySelectorAll('.spidermans-info-section img').forEach(function (e) {
         if (e.classList.contains(e)) {
             e.classList.remove('blurred');
         } else {
