@@ -466,11 +466,12 @@ header {
     border-top: 20px solid transparent;
     border-bottom: 20px solid transparent;
 }
+
 .blurred {
     filter: blur(5px);
 }
 
-.spidermans-info-section img:hover{
+.spidermans-info-section img:hover {
     transition: transform 0.5s ease-in-out;
     transform: scale(1.2);
 }
@@ -634,4 +635,31 @@ header {
     to {
         background-position: -648px 0;
     }
+}
+
+
+
+
+
+/* Estilos para que el boton del burger se transforme en una X */
+.hide {
+    display: none;
+}
+
+#topRect {
+    transition: transform 0.5s ease, transform-origin 0.5s ease;
+}
+
+#bottomRect {
+    transition: transform 0.5s ease, transform-origin 0.5s ease;
+}
+
+.top-rect-inc {
+    transform: rotate(45deg);
+    transform-origin: 5px 5px;
+}
+
+.bottom-rect-inc {
+    transform: rotate(-45deg);
+    transform-origin: 4px 30px;
 }

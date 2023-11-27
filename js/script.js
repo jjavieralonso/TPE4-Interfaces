@@ -85,3 +85,17 @@ function resetFilters() { //Con 'onmouseout' en el html, hacemos que se limpien 
         e.classList.remove('blurred');
     });
 }
+
+
+//Valores y funcion para que el menu hamburguesa cambie a una X, o vuelva a su forma.
+
+const topRect = document.getElementById('topRect');
+const middleRect = document.getElementById('midRect');
+const bottomRect = document.getElementById('bottomRect');
+const menuSvg = document.getElementById('menu-svg');
+
+menuSvg.addEventListener('click', () => {
+    middleRect.classList.toggle('hide');
+    topRect.classList.toggle('top-rect-inc');
+    bottomRect.classList.toggle('bottom-rect-inc');
+});

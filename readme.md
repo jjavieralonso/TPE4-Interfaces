@@ -1,0 +1,1 @@
+Resolucion de la pagina: 1280x1024
