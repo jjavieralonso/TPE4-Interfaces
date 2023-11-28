@@ -338,6 +338,7 @@ header {
 
 .ghost-spider-section img:hover {
   scale: 1.2;
+  rotate: 5deg;
   z-index: 999;
 }
 
@@ -345,7 +346,7 @@ header {
   position: absolute;
   top: -100px;
   left: 75px;
-  transform: rotate(-13.078deg);
+  rotate: -13.078deg;
   z-index: 1;
 }
 
@@ -353,7 +354,7 @@ header {
   position: absolute;
   top: 70px;
   left: 85px;
-  transform: rotate(-26.474deg);
+  rotate: -26.474deg;
   z-index: 2;
 }
 
@@ -361,7 +362,7 @@ header {
   position: absolute;
   top: 275px;
   left: 100px;
-  transform: rotate(-36.016deg);
+  rotate: -36.016deg;
   z-index: 3;
 }
 

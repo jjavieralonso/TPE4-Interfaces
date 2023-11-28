@@ -67,22 +67,16 @@ function applyFilters(e, color, borderColor) {
     });
 }
 
-function resetFilters() {
-  //Con 'onmouseout' en el html, hacemos que se limpien los filtros que aplicamos previamente asi queda default
-  document.querySelector("#spidermans-info-section").style.backgroundColor = "";
-  document.querySelector("#spidermans-info-section").style.borderTop =
-    "20px solid transparent";
-  document.querySelector("#spidermans-info-section").style.borderBottom =
-    "20px solid transparent";
-  document
-    .querySelectorAll(".spidermans-info-section img")
-    .forEach(function (e) {
-      e.classList.remove("blurred");
+// Agregar evento mouseover a cada elemento
+document
+  .querySelectorAll(".spidermans-info-section img")
+  .forEach(function (element) {
+    element.addEventListener("mouseover", function () {
+      element.classList.remove("blurred");
     });
-}
+  });
 
 //Valores y funcion para que el menu hamburguesa cambie a una X, o vuelva a su forma.
-
 const topRect = document.getElementById("topRect");
 const middleRect = document.getElementById("midRect");
 const bottomRect = document.getElementById("bottomRect");
@@ -94,17 +88,30 @@ menuSvg.addEventListener("click", () => {
   bottomRect.classList.toggle("bottom-rect-inc");
 });
 
+//funcion para el loader
 function hidePageContainerShowLoader() {
   var pageContainer = document.getElementById("page-container");
   var loader = document.getElementById("loader");
 
-  pageContainer.style.display = "none";
-  loader.style.display = "block";
+  pageContainer.style.display = "none"; //no muestra en un principio la pagina
+  loader.style.display = "block"; //pero si muestra el loader
 
   setTimeout(function () {
+    //despues de 3s invierte, y muestra la pagina y saca el loader
     pageContainer.style.display = "block";
     loader.style.display = "none";
   }, 3000);
 }
 hidePageContainerShowLoader();
 
+window.addEventListener("scroll", function () {
+  //funcion para que las cards de ghost spider vayan a destiempo
+  var ghostspidercards = document.querySelectorAll(".ghost-spider-section img");
+
+  var translateY = window.scrollY * 0.03;
+
+  ghostspidercards.forEach(function (ghostspidercard, index = 1) {
+    ghostspidercard.style.transform =
+      "translateY(" + (translateY * index) / 3 + "px)";
+  });
+});
