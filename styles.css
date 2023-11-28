@@ -1,687 +1,709 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap");
 
 body {
-    margin: 0;
-    margin-top: 72px;
+  margin: 0;
+  margin-top: 72px;
+}
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5499f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
+.loader-text {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scaleOut 2s ease-out forwards;
+}
+
+.loader-text img {
+  animation: rotateIn 2.7s ease-out forwards;
+}
+
+@keyframes scaleOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(9);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  100% {
+    transform: rotate(3600deg) scale(1);
+  }
+}
 /* HEADER */
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #5499F8;
-    padding: 18px 100px;
-    z-index: 10000;
-    width: 1080px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #5499f8;
+  padding: 18px 100px;
+  z-index: 10000;
+  width: 1080px;
 }
 
 .buy-btn {
-    width: 200px;
-    height: 50px;
-    flex-shrink: 0;
-    color: #02187E;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 94.5%;
-    letter-spacing: 2.2px;
-    text-transform: uppercase;
-    border-radius: 111px;
-    border: 8px solid var(--2982-ff, #2982FF);
-    background: #FFE901;
-    box-shadow: 4px 5px 0px 0px #02187E;
-    transition: box-shadow 0.1s ease-in;
-    margin-top: 5px;
-    cursor: pointer;
+  width: 200px;
+  height: 50px;
+  flex-shrink: 0;
+  color: #02187e;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  border-radius: 111px;
+  border: 8px solid var(--2982-ff, #2982ff);
+  background: #ffe901;
+  box-shadow: 4px 5px 0px 0px #02187e;
+  transition: box-shadow 0.1s ease-in;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 .buy-btn:hover {
-    box-shadow: 2px 3px 0px 0px #02187E;
-    background: #97a10a;
+  box-shadow: 2px 3px 0px 0px #02187e;
+  background: #97a10a;
 }
 
 .logo-image-header {
-    width: 133px;
-    height: 68px;
-    flex-shrink: 0;
+  width: 133px;
+  height: 68px;
+  flex-shrink: 0;
 }
 
-
 .intro {
-    position: relative;
-    width: 100%;
-    height: 720px;
-    background-image: url('assets/images/background-intro.png');
-    z-index: 9;
+  position: relative;
+  width: 100%;
+  height: 720px;
+  background-image: url("assets/images/background-intro.png");
+  z-index: 9;
 }
 
 .buildings-intro {
-    position: absolute;
-    width: 1280px;
-    filter: blur(3.5px);
-    z-index: 9;
+  position: absolute;
+  width: 1280px;
+  filter: blur(3.5px);
+  z-index: 9;
 }
 
 .parallax {
-    position: absolute;
-    top: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .spidermans-intro {
-    z-index: 9999;
+  z-index: 9999;
 }
 
 .spiderman-1-intro {
-    position: absolute;
-    top: 24rem;
-    left: 6rem;
-    width: 300px;
-    height: 418.182px;
-    flex-shrink: 0;
-    z-index: 99;
+  position: absolute;
+  top: 24rem;
+  left: 6rem;
+  width: 300px;
+  height: 418.182px;
+  flex-shrink: 0;
+  z-index: 99;
 }
 
 .spiderman-2-intro {
-    position: absolute;
-    top: 25rem;
-    left: 25rem;
-    width: 465px;
-    height: 465px;
-    z-index: 99;
+  position: absolute;
+  top: 25rem;
+  left: 25rem;
+  width: 465px;
+  height: 465px;
+  z-index: 99;
 }
 
 .spiderman-3-intro {
-    position: absolute;
-    top: 21rem;
-    left: 43.5rem;
-    width: 393px;
-    height: 393px;
-    flex-shrink: 0;
-    z-index: 99;
+  position: absolute;
+  top: 21rem;
+  left: 43.5rem;
+  width: 393px;
+  height: 393px;
+  flex-shrink: 0;
+  z-index: 99;
 }
 
 .telaraña-1,
 .telaraña-2 {
-    position: absolute;
-    z-index: 999;
-    overflow: hidden;
+  position: absolute;
+  z-index: 999;
+  overflow: hidden;
 }
 
 .telaraña-1 {
-    top: 24.5rem;
-    left: -5rem;
-    transform: rotate(65deg);
-    width: 525px;
-    height: 600.274px;
-    margin-bottom: -250px;
+  top: 24.5rem;
+  left: -5rem;
+  transform: rotate(65deg);
+  width: 525px;
+  height: 600.274px;
+  margin-bottom: -250px;
 }
 
 .telaraña-container {
-    position: relative;
-    max-width: 100%;
+  position: relative;
+  max-width: 100%;
 }
 
 .telaraña-2 {
-    position: absolute;
-    top: 25rem;
-    right: -82.5rem;
-    transform: scaleX(-1) rotate(65deg);
-    width: 256.659px;
-    height: auto;
+  position: absolute;
+  top: 25rem;
+  right: -82.5rem;
+  transform: scaleX(-1) rotate(65deg);
+  width: 256.659px;
+  height: auto;
 }
 
-
 .title-image {
-    position: absolute;
-    top: 40px;
-    left: 30%;
-    z-index: 10000000;
-    width: 590px;
-    height: 301px;
+  position: absolute;
+  top: 40px;
+  left: 30%;
+  z-index: 10000000;
+  width: 590px;
+  height: 301px;
 }
 
 .title-image-container {
-    position: absolute;
-    left: 25%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-info-1 {
-    margin: 0;
-    margin-top: -75px;
-    padding: 0;
-    position: relative;
-    top: 85%;
-    width: 100%;
-    height: 82.6vh;
-    background-image: url('assets/svgs/background-2.svg');
-    z-index: 10;
+  margin: 0;
+  margin-top: -75px;
+  padding: 0;
+  position: relative;
+  top: 85%;
+  width: 100%;
+  height: 82.6vh;
+  background-image: url("assets/svgs/background-2.svg");
+  z-index: 10;
 }
 
-
-
 .section-info-1 article {
-    position: absolute;
-    top: 219px;
-    margin-left: 95px;
-    width: 646px;
+  position: absolute;
+  top: 219px;
+  margin-left: 95px;
+  width: 646px;
 }
 
 .section-info-1 h1 {
-    color: #FFF;
-    font-family: 'Lato', sans-serif;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 94.5%;
-    margin: 0;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
+  margin: 0;
 }
 
 .section-info-1 p {
-    color: #FFF;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    width: 586px;
-    height: 154px;
-    margin-top: 24;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 586px;
+  height: 154px;
+  margin-top: 24;
 }
 
 .green-goblin {
-    width: 553px;
-    height: 921px;
-    transform: scaleX(-1);
-    position: absolute;
-    top: 132px;
-    right: 15px;
-    z-index: 999;
+  width: 553px;
+  height: 921px;
+  position: absolute;
+  top: 132px;
+  right: 15px;
+  z-index: 999;
 }
 
 .game-screen-1 {
-    width: 751.649px;
-    height: 413.131px;
-    transform: rotate(-2.222deg);
-    position: absolute;
-    top: 523.09px;
-    left: 98.28px;
-    z-index: 998;
-    border-radius: 26px;
-    border: 9px solid #FFF;
-    background: url(<path-to-image>), lightgray 0px -47.53px / 100% 118.165% no-repeat;
-    box-shadow: 3px 6px 8px 4px rgba(0, 0, 0, 0.15);
+  width: 751.649px;
+  height: 413.131px;
+  transform: rotate(-2.222deg);
+  position: absolute;
+  top: 523.09px;
+  left: 98.28px;
+  z-index: 998;
+  border-radius: 26px;
+  border: 9px solid #fff;
+  background: url(<path-to-image>),
+    lightgray 0px -47.53px / 100% 118.165% no-repeat;
+  box-shadow: 3px 6px 8px 4px rgba(0, 0, 0, 0.15);
 }
-
 
 .spiderman-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 40.56px;
-    margin: 100px;
-    margin-top: 248px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 40.56px;
+  margin: 100px;
+  margin-top: 248px;
 }
 
-.spiderman-cards div{
-    opacity: 0;
+.spiderman-cards div {
+  opacity: 0;
 }
 
 @keyframes fadeInUp-1 {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp-2 {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeInUp-3 {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .spiderman-history {
-    width: 333px;
-    height: 218px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  width: 333px;
+  height: 218px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .card-image {
-    width: 332.96px;
-    height: 302.691px;
-    border-radius: 41px;
-    border: 9px solid var(--2982-ff, #2982FF);
-    box-shadow: 4px 5px 0px 0px #02187E;
+  width: 332.96px;
+  height: 302.691px;
+  border-radius: 41px;
+  border: 9px solid var(--2982-ff, #2982ff);
+  box-shadow: 4px 5px 0px 0px #02187e;
 }
 
 .ghost-spider-section {
-    position: relative;
+  position: relative;
 }
 
 .ghost-spider-section img {
-    width: 500px;
-    transition-duration: 0.3s;
+  width: 500px;
+  transition-duration: 0.3s;
 }
 
 .ghost-spider-section img:hover {
-    scale: 1.2;
-    z-index: 999;
+  scale: 1.2;
+  z-index: 999;
 }
 
 .ghost-spider-card-1 {
-    position: absolute;
-    top: -100px;
-    left: 75px;
-    transform: rotate(-13.078deg);
-    z-index: 1;
+  position: absolute;
+  top: -100px;
+  left: 75px;
+  transform: rotate(-13.078deg);
+  z-index: 1;
 }
 
 .ghost-spider-card-2 {
-    position: absolute;
-    top: 70px;
-    left: 85px;
-    transform: rotate(-26.474deg);
-    z-index: 2;
+  position: absolute;
+  top: 70px;
+  left: 85px;
+  transform: rotate(-26.474deg);
+  z-index: 2;
 }
 
 .ghost-spider-card-3 {
-    position: absolute;
-    top: 275px;
-    left: 100px;
-    transform: rotate(-36.016deg);
-    z-index: 3;
+  position: absolute;
+  top: 275px;
+  left: 100px;
+  transform: rotate(-36.016deg);
+  z-index: 3;
 }
 
 .ghost-spider-section {
-    background-image: url('assets/images/gs-bg.png');
-    height: 55vh;
-    z-index: 101;
+  background-image: url("assets/images/gs-bg.png");
+  height: 55vh;
+  z-index: 101;
 }
 
 .avengers-section {
-    background-image: url('assets/svgs/background-avengers.svg');
-    width: 100%;
-    height: 82.6vh;
-    z-index: 100;
-    transform-origin: top left;
-    margin-top: -104px;
-    position: relative;
+  background-image: url("assets/svgs/background-avengers.svg");
+  width: 100%;
+  height: 82.6vh;
+  z-index: 100;
+  transform-origin: top left;
+  margin-top: -104px;
+  position: relative;
 }
 
 .avengers-section div {
-    transform-origin: top left;
-    padding: 104px;
-    padding-top: 208px;
+  transform-origin: top left;
+  padding: 104px;
+  padding-top: 208px;
 }
 
 .avengers-section h2 {
-    width: 667px;
-    color: white;
-    font-size: 60px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    line-height: 56.70px;
-    word-wrap: break-word;
-    padding: 0;
-    margin: 0;
+  width: 667px;
+  color: white;
+  font-size: 60px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 56.7px;
+  word-wrap: break-word;
+  padding: 0;
+  margin: 0;
 }
 
 .parallax-container {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 420px;
-    left: 101.76px;
-    right: 101.76px;
-    z-index: 9999;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 420px;
+  left: 101.76px;
+  right: 101.76px;
+  z-index: 9999;
 }
 
 .parallax-container img {
-    position: absolute;
+  position: absolute;
 }
 
 .black-panther {
-    top: -250px;
-    right: 140px;
+  top: -250px;
+  right: 140px;
 }
 
 .heroe-avengers-2 {
-    top: -100px;
-    left: 30px;
+  top: -100px;
+  left: 30px;
 }
 
 .hulk {
-    top: 110px;
-    right: -60px;
+  top: 110px;
+  right: -60px;
 }
 
-
-
 .game-info {
-    padding: 200px 100px 40px 104px;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
+  padding: 200px 100px 40px 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
 
 .game-info h2 {
-    color: #000;
-    font-family: Lato;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 94.5%;
-    width: 802px;
+  color: #000;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 94.5%;
+  width: 802px;
 }
 
 .game-info article {
-    display: flex;
-    flex-direction: row;
-    gap: 57px;
+  display: flex;
+  flex-direction: row;
+  gap: 57px;
 }
 
 .game-info article img {
-    width: 552px;
-    height: 302.762px;
+  width: 552px;
+  height: 302.762px;
 }
 
 .game-info article div {
-    gap: 25px;
+  gap: 25px;
 }
 
 .game-info article div h3 {
-    color: #000;
-    font-family: Lato;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.5%;
-    width: 467px;
-    margin: 0;
+  color: #000;
+  font-family: Lato;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  width: 467px;
+  margin: 0;
 }
 
 .game-info article div p {
-    color: #000;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.5%;
-    width: 467px;
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  width: 467px;
 }
 
-
-
 .buy-game {
-    background-color: #000;
-    padding: 104px;
-    padding-top: 75px;
-    clip-path: polygon(0 0, 100% 6rem, 100% calc(100% - 6rem), 0 100%);
+  background-color: #000;
+  padding: 104px;
+  padding-top: 75px;
+  clip-path: polygon(0 0, 100% 6rem, 100% calc(100% - 6rem), 0 100%);
 }
 
 .buy-game h2 {
-    width: 816px;
-    color: #FFF;
-    font-family: Lato;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+  width: 816px;
+  color: #fff;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .buy-game .buy-btn {
-    width: 292px;
-    height: 50px;
-    color: #02187E;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 94.5%;
-    letter-spacing: 2.2px;
+  width: 292px;
+  height: 50px;
+  color: #02187e;
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
 }
 
-
-
-
 .spidermans-info-section {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease-in-out;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
 }
 
 .blurred {
-    filter: blur(5px);
+  filter: blur(5px);
 }
 
 .spidermans-info-section img:hover {
-    transition: transform 0.5s ease-in-out;
-    transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+  transform: scale(1.2);
 }
 
 .background-footer {
-    width: 100%;
-    height: auto;
-    z-index: 1;
+  width: 100%;
+  height: auto;
+  z-index: 1;
 }
 
 .buildings-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
 }
 
 .subscribe-form form input {
-    width: 562px;
-    max-height: 100px;
-    height: 80px;
-    color: rgba(0, 0, 0, 0.39);
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.5%;
-    letter-spacing: 2.2px;
-    border-radius: 50px 0px 0px 50px;
-    border-top: 9px solid #2982FF;
-    border-bottom: 9px solid #2982FF;
-    border-left: 9px solid #2982FF;
-    background: #FFF;
-    padding-left: 52px;
+  width: 562px;
+  max-height: 100px;
+  height: 80px;
+  color: rgba(0, 0, 0, 0.39);
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
+  border-radius: 50px 0px 0px 50px;
+  border-top: 9px solid #2982ff;
+  border-bottom: 9px solid #2982ff;
+  border-left: 9px solid #2982ff;
+  background: #fff;
+  padding-left: 52px;
 }
 
 .subscribe-form form button {
-    width: 218px;
-    height: 100px;
-    flex-shrink: 0;
-    border-radius: 0px 50px 50px 0px;
-    border: 9px solid #2982FF;
-    background: #FFE901;
-    color: #02187E;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 94.5%;
-    letter-spacing: 2.2px;
-    text-transform: uppercase;
+  width: 218px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 0px 50px 50px 0px;
+  border: 9px solid #2982ff;
+  background: #ffe901;
+  color: #02187e;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
 }
 
 .subscribe-form h2 {
-    width: 816px;
-    color: #000;
-    text-align: center;
-    font-family: Lato;
-    font-size: 60px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 94.5%;
+  width: 816px;
+  color: #000;
+  text-align: center;
+  font-family: Lato;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 94.5%;
 }
 
 .subscribe-form {
-    position: absolute;
-    top: 150px;
-    left: 232px;
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  top: 150px;
+  left: 232px;
+  display: flex;
+  flex-direction: column;
 }
 
 .subscribe-form form {
-    display: flex;
-    flex-direction: row;
-    gap: 0;
-    border-radius: 50px;
-    box-shadow: 4px 5px 0px 0px #02187E;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  border-radius: 50px;
+  box-shadow: 4px 5px 0px 0px #02187e;
 }
 
 .subscribe-form p {
-    width: 578px;
-    height: 95px;
-    flex-shrink: 0;
-    color: #000;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.5%;
-    margin-top: 39px;
-    margin-left: 52px;
+  width: 578px;
+  height: 95px;
+  flex-shrink: 0;
+  color: #000;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  margin-top: 39px;
+  margin-left: 52px;
 }
 
 .subscribe-form p span {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .subscribe-form img {
-    width: 231px;
-    height: 145px;
-    flex-shrink: 0;
-    margin-top: 17px;
-    margin-left: 52px;
+  width: 231px;
+  height: 145px;
+  flex-shrink: 0;
+  margin-top: 17px;
+  margin-left: 52px;
 }
 
 .platforms {
-    width: 100%;
-    height: 80px;
-    background-color: #242424;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: #242424;
+  display: flex;
+  justify-content: center;
 }
 
 .platforms img {
-    width: 1080px;
-    height: 75px;
+  width: 1080px;
+  height: 75px;
 }
 
 .privacy-policy {
-    height: 598px;
-    background-color: #5E5E5D;
-    padding: 38px 100px;
+  height: 598px;
+  background-color: #5e5e5d;
+  padding: 38px 100px;
 }
 
 .privacy-policy p {
-    width: 820px;
-    color: #FFF;
-    font-family: Lato;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 94.5%;
-    letter-spacing: 2.2px;
+  width: 820px;
+  color: #fff;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 94.5%;
+  letter-spacing: 2.2px;
 }
 
 .privacy-policy img {
-    width: 212px;
-    height: 41px;
-    flex-shrink: 0;
+  width: 212px;
+  height: 41px;
+  flex-shrink: 0;
 }
 
-
-
-
 .spritesheet {
-    position: absolute;
-    top: 825px;
-    left: 55px;
-    display: inline-block;
-    background: url('assets/images/spiderman-spritesheet.png');
-    width: 72px;
-    height: 72px;
-    background-position: 0px 0;
-    animation: move 1s steps(8) infinite;
+  position: absolute;
+  top: 825px;
+  left: 55px;
+  display: inline-block;
+  background: url("assets/images/spiderman-spritesheet.png");
+  width: 72px;
+  height: 72px;
+  background-position: 0px 0;
+  animation: move 1s steps(8) infinite;
 }
 
 @keyframes move {
-    to {
-        background-position: -648px 0;
-    }
+  to {
+    background-position: -648px 0;
+  }
 }
-
-
-
-
 
 /* Estilos para que el boton del burger se transforme en una X */
 .hide {
-    display: none;
+  display: none;
 }
 
 #topRect {
-    transition: transform 0.5s ease, transform-origin 0.5s ease;
+  transition: transform 0.5s ease, transform-origin 0.5s ease;
 }
 
 #bottomRect {
-    transition: transform 0.5s ease, transform-origin 0.5s ease;
+  transition: transform 0.5s ease, transform-origin 0.5s ease;
 }
 
 .top-rect-inc {
-    transform: rotate(45deg);
-    transform-origin: 5px 5px;
+  transform: rotate(45deg);
+  transform-origin: 5px 5px;
 }
 
 .bottom-rect-inc {
-    transform: rotate(-45deg);
-    transform-origin: 4px 30px;
+  transform: rotate(-45deg);
+  transform-origin: 4px 30px;
 }
